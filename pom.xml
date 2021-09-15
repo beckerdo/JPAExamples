@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>info.danbecker</groupId>
+	<artifactId>jpaexamples</artifactId>
+	<version>1.0-SNAPSHOT</version>
+
+	<name>JPA Examples</name>
+	<description>Java Persistence Architecture and entity/relation examples</description>
+
+	<contributors>
+		<contributor>
+			<name>Dan Becker</name>
+			<email>dan@danbecker.info</email>
+			<organizationUrl>http://www.danbecker.info/</organizationUrl>
+		</contributor>
+	</contributors>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<version.jpaexamples>${project.version}</version.jpaexamples>
+		
+		<!-- Versions -->
+		<java.version>12</java.version>
+      <maven.compiler.source>${java.version}</maven.compiler.source>
+      <maven.compiler.target>${java.version}</maven.compiler.target>
+
+    	<maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
+
+      <hibernate.version>5.4.12.Final</hibernate.version>
+      <h2.version>1.4.200</h2.version>
+
+      <slf4j.version>1.7.30</slf4j.version>
+      <logback.version>1.2.3</logback.version>
+
+      <junit.version>5.5.2</junit.version>
+		<mockito.version>3.0.0</mockito.version>
+      <assertj.version>3.13.2</assertj.version>
+	</properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-plugin.version}</version>
+            </plugin>
+        </plugins>
+    </build>
+	 
+   <dependencies>
+		<!-- Utilities -->
+		<dependency>
+			<!-- Command line interface and options. -->
+			<groupId>commons-cli</groupId>
+			<artifactId>commons-cli</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<!-- JPA -->
+      <dependency>
+         <groupId>org.hibernate</groupId>
+         <artifactId>hibernate-core</artifactId>
+      </dependency>
+      <dependency>
+         <groupId>com.h2database</groupId>
+         <artifactId>h2</artifactId>
+      </dependency>
+  		<!--  Logging --> 
+		<dependency> 
+  			<groupId>org.slf4j</groupId>
+  			<artifactId>slf4j-log4j12</artifactId>
+		</dependency>
+      <dependency>
+         <groupId>ch.qos.logback</groupId>
+         <artifactId>logback-classic</artifactId>
+      </dependency>
+		<!-- Testing -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<scope>test</scope>
+		</dependency>	
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<scope>test</scope>
+		</dependency>	 
+      <dependency>
+         <groupId>org.assertj</groupId>
+         <artifactId>assertj-core</artifactId>
+      </dependency>
+	</dependencies>
+</project>
