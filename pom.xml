@@ -25,20 +25,8 @@
 		
 		<!-- Versions -->
 		<java.version>12</java.version>
-      <maven.compiler.source>${java.version}</maven.compiler.source>
-      <maven.compiler.target>${java.version}</maven.compiler.target>
-
-    	<maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
-
-      <hibernate.version>5.4.12.Final</hibernate.version>
-      <h2.version>1.4.200</h2.version>
-
-      <slf4j.version>1.7.30</slf4j.version>
-      <logback.version>1.2.3</logback.version>
-
-      <junit.version>5.5.2</junit.version>
-		<mockito.version>3.0.0</mockito.version>
-      <assertj.version>3.13.2</assertj.version>
+      	<maven.compiler.source>${java.version}</maven.compiler.source>
+      	<maven.compiler.target>${java.version}</maven.compiler.target>
 	</properties>
 
     <build>
@@ -46,12 +34,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>${maven-surefire-plugin.version}</version>
+                <version>2.22.2</version>
             </plugin>
         </plugins>
     </build>
 	 
-   <dependencies>
+	<dependencies>
 		<!-- Utilities -->
 		<dependency>
 			<!-- Command line interface and options. -->
@@ -60,37 +48,38 @@
 			<version>1.4</version>
 		</dependency>
 		<!-- JPA -->
-      <dependency>
-         <groupId>org.hibernate</groupId>
-         <artifactId>hibernate-core</artifactId>
-      </dependency>
-      <dependency>
-         <groupId>com.h2database</groupId>
-         <artifactId>h2</artifactId>
-      </dependency>
+		<dependency>
+        	<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.4.12.Final</version>
+		</dependency>
+		<dependency>
+        	<groupId>com.h2database</groupId>
+        	<artifactId>h2</artifactId>
+      		<version>1.4.200</version>
+      	</dependency>
   		<!--  Logging --> 
 		<dependency> 
   			<groupId>org.slf4j</groupId>
-  			<artifactId>slf4j-log4j12</artifactId>
+  			<artifactId>slf4j-api</artifactId>
+     		<version>1.7.30</version>
 		</dependency>
-      <dependency>
-         <groupId>ch.qos.logback</groupId>
-         <artifactId>logback-classic</artifactId>
-      </dependency>
+      	<dependency>
+        	<groupId>ch.qos.logback</groupId>
+        	<artifactId>logback-classic</artifactId>
+        	<version>1.2.3</version>
+     	</dependency>
 		<!-- Testing -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter</artifactId>
+      		<version>5.5.2</version>
 			<scope>test</scope>
 		</dependency>	
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-core</artifactId>
-			<scope>test</scope>
-		</dependency>	 
-      <dependency>
-         <groupId>org.assertj</groupId>
-         <artifactId>assertj-core</artifactId>
-      </dependency>
+      	<dependency>
+        	<groupId>org.assertj</groupId>
+        	<artifactId>assertj-core</artifactId>
+			<version>3.13.2</version>
+      	</dependency>
 	</dependencies>
 </project>
