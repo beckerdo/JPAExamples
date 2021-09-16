@@ -1,6 +1,28 @@
-# IntelliJ
+# Build and Package Files
+./target
+*.class
+*.jar
+*.war
+*.ear
+
+#testing
+test-reports
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# Mac crap
+*.DS_Store
+
+# Eclipse crap
+.classpath
+.project
+.settings
+
+# IntelliJ crap
 *.iml
 .idea/
 
-# Maven
-target/
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+/target/
